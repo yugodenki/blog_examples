@@ -37,7 +37,7 @@ make
 
 ビルドしたプログラムをRaspberry Pi Pico上で動作させるには、まずPicoのBOOTSELボタンを押しながらPicoをコンピューターに接続します。コンピューターはPicoを大容量ストレージデバイスとして認識するので、先ほどの`.uf2`ファイルをPicoにコピーします。コピーが終了するとただちにPicoは再起動し、プログラムが動作し始めます。
 
-# blog/sound-from-pico README (English)
+# blog/video-from-pico-lcd-animation README (English)
 This is an example code I used in my blog post to demonstrate outputting animation to an LCD module using the Raspberry Pi Pico.
 It is displaying a sequence of images similar to a GIF.
 The image data is provided as a C header file that is preprepared.
