@@ -17,11 +17,11 @@
 
 #include "st7789_lcd.pio.h"
 
-#include "../data/images/frame00_rgb565.h"
-#include "../data/images/frame01_rgb565.h"
-#include "../data/images/frame02_rgb565.h"
-#include "../data/images/frame03_rgb565.h"
-#include "../data/images/frame04_rgb565.h"
+#include "../data/320x240images/frame00_rgb565.h"
+#include "../data/320x240images/frame01_rgb565.h"
+#include "../data/320x240images/frame02_rgb565.h"
+#include "../data/320x240images/frame03_rgb565.h"
+#include "../data/320x240images/frame04_rgb565.h"
 
 // Tested with the parts that have the height of 240 and 320
 #define SCREEN_WIDTH 240
@@ -29,12 +29,12 @@
 #define IMAGE_SIZE 256
 #define LOG_IMAGE_SIZE 8
 
-#define PIN_DIN 0
-#define PIN_CLK 1
-#define PIN_CS 2
-#define PIN_DC 3
-#define PIN_RESET 4
-#define PIN_BL 5
+#define PIN_DIN 7
+#define PIN_CLK 6
+#define PIN_CS 5
+#define PIN_DC 4
+#define PIN_RESET 3
+#define PIN_BL 2
 
 #define SERIAL_CLK_DIV 1.f
 
@@ -110,7 +110,7 @@ int main() {
     lcd_init(pio, sm, st7789_init_seq);
     gpio_put(PIN_BL, 1);
 
-    uint16_t *frame;
+    const uint16_t *frame;
     int frame_selector = 0;
 
     while (1) {
