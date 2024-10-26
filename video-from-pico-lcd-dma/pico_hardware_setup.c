@@ -18,12 +18,6 @@ void lcd_send_command(uint8_t command, size_t data_len, const char *data, uint32
     if (delay_ms) sleep_ms(delay_ms);
 }
 
-// Only output to the needed area of the screen
-void lcd_set_raset_to_lcd_resolution() {
-    lcd_send_command(0x2A, 4, "\x00\x14\x01\x2B", 0);  // pixels 20 to 299 (280 pixels)
-    lcd_send_command(0x2B, 4, "\x00\x00\x00\xF0", 0);
-}
-
 // LCD setup does not use PIO but only uses SPI
 void lcd_setup(void) {
     spi_init(spi0, 8000000);
