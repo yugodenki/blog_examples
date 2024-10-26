@@ -6,8 +6,8 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 # Pull in Pico SDK (must be before project)
-include(pico_sdk_import.cmake)
-include(pico_extras_import_optional.cmake)
+include(../pico_sdk_import.cmake)
+include(../pico_extras_import_optional.cmake)
 
 set(PROJECT_NAME sound_from_pico)
 project(${PROJECT_NAME} C CXX ASM)
@@ -37,7 +37,6 @@ target_link_libraries(${PROJECT_NAME}
         hardware_timer
         hardware_clocks
         hardware_pwm
-        pico_audio_pwm
         )
 
 pico_add_extra_outputs(${PROJECT_NAME})
