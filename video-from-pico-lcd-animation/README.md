@@ -2,6 +2,8 @@
 Raspberry Pi PicoからLCDに映像を出力するサンプルです。
 連続する画像データを表示することで、GIF画像のような映像を表示します。
 画像データはあらかじめCヘッダファイルに変換したものを使用します。
+
+このサンプルは[こちらのブログ記事](https://yugodenki.vercel.app/ja/blog/video-from-pico-lcd-optimization)用に作成したものです。
  
 ## 動作手順
 ### 前提
@@ -38,8 +40,8 @@ make
 ビルドしたプログラムをRaspberry Pi Pico上で動作させるには、まずPicoのBOOTSELボタンを押しながらPicoをコンピューターに接続します。コンピューターはPicoを大容量ストレージデバイスとして認識するので、先ほどの`.uf2`ファイルをPicoにコピーします。コピーが終了するとただちにPicoは再起動し、プログラムが動作し始めます。
 
 # blog/video-from-pico-lcd-animation README (English)
-This is an example code I used in my blog post to demonstrate outputting animation to an LCD module using the Raspberry Pi Pico.
-It is displaying a sequence of images similar to a GIF.
+This is an example code I used in my [blog post](https://yugodenki.vercel.app/en/blog/video-from-pico-lcd-optimization) to demonstrate outputting animation to an LCD module using the Raspberry Pi Pico.
+It displays a sequence of images similar to a GIF.
 The image data is provided as a C header file that is preprepared.
 
 ## Building and running the program

@@ -1,5 +1,7 @@
 # blog/video-from-pico-lcd-dma README (日本語版)
 Raspberry Pi PicoからLCDに映像を出力する際に、DMAを使いCPUリソースを使わず高速に転送するサンプルです。
+
+このサンプルは[こちらのブログ記事](https://yugodenki.vercel.app/ja/blog/video-from-pico-lcd-optimization)用に作成したものです。
  
 ## 動作手順
 ### 前提
@@ -36,7 +38,7 @@ make
 ビルドしたプログラムをRaspberry Pi Pico上で動作させるには、まずPicoのBOOTSELボタンを押しながらPicoをコンピューターに接続します。コンピューターはPicoを大容量ストレージデバイスとして認識するので、先ほどの`.uf2`ファイルをPicoにコピーします。コピーが終了するとただちにPicoは再起動し、プログラムが動作し始めます。
 
 # blog/video-from-pico-lcd-dma README (English)
-This is an example code I used in my blog post to demonstrate outputting animation to an LCD module using the Raspberry Pi Pico. 
+This is an example code I used in my [blog post](https://yugodenki.vercel.app/en/blog/video-from-pico-lcd-optimization) to demonstrate outputting animation to an LCD module using the Raspberry Pi Pico. 
 This time, I'm using DMA to transfer the image data to the LCD, freeing up CPU resources and allowing for higher frame rates.
 
 ## Building and running the program
